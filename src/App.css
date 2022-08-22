@@ -1,38 +1,178 @@
-.App {
-  text-align: center;
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --bg-color: #1d2029;
+  --count: rgb(243, 243, 243);
+  --card: #252b43;
+  --followers: #bfc2c9;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.light-mode {
+  --bg-color: #eff1f8;
+  --count: rgb(8, 0, 0);
+  --card: #d6dce9e3;
+  --followers: #bfc2c9;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  /* width: 80%; */
+  background-color: var(--bg-color);
+}
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  min-width: 100vw;
+  background-color: var(--bg-color);
+  gap: 50px;
+}
+.upper {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: white;
+  display: flex;
+  width: 75vw;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 700;
+}
+.totalFollow {
+  color: var(--count);
+  font-size: 0.8rem;
+  font-weight: 100;
+  padding-top: 5px;
+}
+
+.Large-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 1080px;
+  flex-wrap: wrap;
+}
+
+.large {
+  background-color: var(--card);
+  width: 230px;
+  height: 200px;
+  border-radius: 5px;
+  color: var(--count);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.large .count {
+  font-size: 2.5rem;
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.large .today {
+  font-size: 0.8rem;
+  font-weight: 100;
+  color: #2a8b7a;
+}
+.large .type {
+  font-size: 1rem;
+  color: var(--followers);
+}
+
+.Small-head {
+  color: aliceblue;
+}
+.Small-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 1080px;
+
+  flex-wrap: wrap;
+}
+
+.Small-Card {
+  background-color: var(--card);
+  margin: 10px;
+  height: 100px;
+  min-width: 250px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.Small-Card .name {
+  display: flex;
+  justify-content: space-between;
+}
+.Small-Card .count {
+  display: flex;
+  justify-content: space-between;
+  background-color: ;
+}
+
+.Small-Card .small-type {
+  color: var(--count);
+}
+.Small-Card .small-logo {
+}
+.Small-Card .small-count {
+  color: var(--count);
+  font-size: 25px;
+  font-weight: bold;
+}
+.Small-Card .small-percent {
+  color: #2a8b7a;
+}
+
+@media only screen and (max-width: 375px) {
+  .Small-cards {
+    /* flex-direction: column; */
   }
-  to {
-    transform: rotate(360deg);
+  .Large-cards {
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
   }
+  .large {
+    margin: 10px;
+  }
+}
+
+.btn-div {
+  color: black;
+  width: 70px;
+  border: 5px solid black;
+  border-radius: 50px;
+  position: relative;
+  height: 30px;
+  background-color: #252b43;
+  transition: all 1s ease-out;
+}
+.circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #2a8b7a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  position: absolute;
+  transition: all 1s ease-out;
+}
+
+.move-right {
+  right: 0;
 }
